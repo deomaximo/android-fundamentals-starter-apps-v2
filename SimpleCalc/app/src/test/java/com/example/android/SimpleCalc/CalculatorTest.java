@@ -24,8 +24,8 @@ import org.junit.runner.RunWith;
 import org.junit.runners.JUnit4;
 
 import static org.hamcrest.CoreMatchers.equalTo;
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
 
 /**
  * JUnit4 unit tests for the calculator logic. These are local unit tests; no device needed
@@ -50,7 +50,8 @@ public class CalculatorTest {
     @Test
     public void addTwoNumbers() {
         double resultAdd = mCalculator.add(1d, 1d);
-        assertThat(resultAdd, is(equalTo(2d)));
+        assertThat( resultAdd, is(equalTo(2d)));
+
     }
 
 
